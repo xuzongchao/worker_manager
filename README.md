@@ -59,3 +59,9 @@ Executor.addTask(task: task).listen((data){
 task.cancel();
 ```
 
+
+
+###让任务具有持续向外部传递数据的修改
+isolate.dart中
+_handleWithPorts 方法中
+向eturn Result.value(bundle == null ? await function() : await function(bundle));  function 中传入sendPort即可
